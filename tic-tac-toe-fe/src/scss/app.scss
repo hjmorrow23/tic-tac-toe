@@ -1,0 +1,195 @@
+@import "colors";
+@import "../../node_modules/react-datepicker/dist/react-datepicker.css";
+
+body { 
+  color: #fff;
+  background-color: navy;
+}
+
+.game-container {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.game-board {
+  list-style: none;
+}
+
+.game-board__space {
+  height: 100px;
+  background-color: navy;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.game-board__space:last-child {
+  border-right:none;
+}
+
+.row:last-child .game-board__space {
+  border-bottom: none;
+}
+
+.space-button {
+  display: inline-block;
+  width: 100%;
+  height: 100%
+}
+
+.sx-dropdown {
+  height: 50px;
+  position: relative;
+  background-color: hsl(0,0%,100%);
+  border-color: #c7c7c7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  display: flex;
+  .dropdown-toggle::after {
+    display: none;
+  }
+  &:hover {
+    border-color: $sx-green-3;
+  }
+}
+
+.sx-dropdown-line {
+  align-self: stretch;
+  background-color: hsl(0,0%,80%);
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 1px;
+  box-sizing: border-box;
+}
+
+.sx-dropdown-toggle {
+  width: 100%;
+  display: flex;
+  padding: 6px 2px 6px 2px;
+  color: hsl(0,0%,50%);
+}
+
+.sx-dropdown-toggle-text {
+  flex: 1;
+}
+
+.sx-dropdown-toggle-arrow {
+  display: flex;
+}
+
+.sx-dropdown-toggle-arrow-icon {
+  display: flex;
+  padding: .5em;
+  color: hsl(0,0%,80%);
+  fill: currentColor;
+  line-height: 1;
+  stroke: currentColor;
+  stroke-width: 0;
+  svg {
+    height: 20px;
+  }
+  &:hover {
+    color: $sx-gray-600;
+  }
+  &.active {
+    color: $sx-gray-800;
+  }
+}
+
+.sx-dropdown-toggle-arrow-border {
+  align-self: stretch;
+  background-color: hsl(0,0%,80%);
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 1px;
+  box-sizing: border-box;
+}
+
+.sx-dropdown-toggle-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 2px 8px;
+}
+
+.sx-dropdown-menu {
+  left: 0;
+  top: calc(100% + .5em);
+  min-width: 100%;
+  padding: .5em .75em;
+  background-color: $white;
+  border-color: $sx-gray-600;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  &.active {
+    display: block;
+  }
+  .btn-group {
+    .active {
+      z-index: 2;
+    }
+  }
+  input {
+    width: 100%;
+  }
+}
+
+.sx-included-list {
+  color: $black;
+  
+  tr td {
+      white-space: nowrap;
+  }
+
+  tr td:nth-child(2) {
+      width: 100%;
+  }
+  
+  .text-gray {
+    color: $tables-gray-text;
+  }
+
+  .delete {
+    cursor: pointer;
+    color: $tables-gray-text;
+  }
+}
+
+.react-datepicker-wrapper, .react-datepicker__input-container {
+  display: block;
+}
+
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__day--selected:hover, .react-datepicker__day--in-selecting-range:hover, .react-datepicker__day--in-range:hover, .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected, .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected:hover, .react-datepicker__day--keyboard-selected, .react-datepicker__day--keyboard-selected:hover {
+  background-color: $sx-green-2;
+}
+
+.sx-sortable-header {
+  cursor: pointer;
+}
+
+.sort-icon {
+  font-size: 50%;
+
+  &.sort-up {
+    transform: rotate(180deg);
+  }
+}
+
+.sort-direction-asc {
+  .sort-down {
+    visibility: hidden;
+  }
+}
+
+.sort-direction-desc {
+  .sort-up {
+    visibility: hidden;
+  }
+}

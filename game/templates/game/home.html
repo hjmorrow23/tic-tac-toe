@@ -1,0 +1,31 @@
+{% extends 'game/base.html' %}
+{% block content %}
+    {% for game in games %}
+        {% if forloop.first %}
+        <div class="game-container container">
+            <h1>Winnah</h1>
+            <p>{{ game.winner }}</p>
+            <p>{{ game.date_started|date:"F d, Y"}}</p>
+            <button>New Game</button>
+            <div class="game-board">
+                <div class="row">
+                    <div class="game-board__space col-sm" id="space-1"><a href="/test" class="space-button"></a></div>
+                    <div class="game-board__space col-sm" id="space-2"></div>
+                    <div class="game-board__space col-sm" id="space-3"></div>
+                </div>
+                <div class="row">
+                    <div class="game-board__space col-sm" id="space-4"></div>
+                    <div class="game-board__space col-sm" id="space-5"></div>
+                    <div class="game-board__space col-sm" id="space-6"></div>
+                </div>
+                <div class="row">
+                    <div class="game-board__space col-sm" id="space-7"></div>
+                    <div class="game-board__space col-sm" id="space-8"></div>
+                    <div class="game-board__space col-sm" id="space-9"></div>
+                </div> 
+            </div> 
+        </div>
+        
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
