@@ -23,12 +23,10 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
-@csrf_exempt
 class PlayerViewSet(viewsets.ModelViewSet):
-    queryset = Player.objects.all().order_by('name')
+    queryset = Player.objects.all()
     serializer_class = PlayerSerializer
 
-@csrf_exempt
 class GameViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all().order_by('date_started')
     serializer_class = GameSerializer

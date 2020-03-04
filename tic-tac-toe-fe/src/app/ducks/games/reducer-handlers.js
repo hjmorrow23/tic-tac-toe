@@ -1,7 +1,6 @@
-
+import { gamesInitialState } from "./reducers";
 
 export const onSetGamesList = (state, games) => {
-    console.log(state, games)
     return {
         ...state, 
         games
@@ -11,6 +10,10 @@ export const onSetGamesList = (state, games) => {
 export const onSetGamesListError = (state, error) => {
     return {
         ...state, 
-        games
+        error
     };
+}
+
+export const resetState = () => {
+    return gamesInitialState;
 }

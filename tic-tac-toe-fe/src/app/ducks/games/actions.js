@@ -9,5 +9,9 @@ export const setGamesList = createAction('games/SET_GAMES', resolve => {
 })
 
 export const setGamesListError = createAction('games/SET_GAMES_ERROR', resolve => {
-    return (games) => resolve(games);
+    return (err) => resolve(err);
 })
+
+export const resetState = createAction('games/RESET_STATE', resolve => {
+    return () => resolve();
+});

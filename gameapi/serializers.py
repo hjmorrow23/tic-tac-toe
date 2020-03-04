@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, Group
 
 from .models import Game, Player
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     # games = serializers.PrimaryKeyRelatedField(many=True, queryset=Game.objects.all())
 
     class Meta:
@@ -11,19 +11,23 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'username', 'email', 'groups']
 
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ['url', 'name']
 
-class PlayerSerializer(serializers.HyperlinkedModelSerializer):
+class PlayerSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Player
-        fields = ['name', 'wins', 'losses', 'ties']
+        fields = ['id', 'name', 'wins', 'losses', 'ties']
 
-class GameSerializer(serializers.HyperlinkedModelSerializer):
+class GameSerializer(serializers.ModelSerializer):
     # creator = serializers.ReadOnlyField(source='creator.username')
+    # winner = serializers.SlugRelatedField(
+    #     slug_field='name',
+    #     read_only=True,
+    # )
 
     class Meta: 
         model = Game
-        fields = ['winner', 'number_of_moves', 'date_started', 'creator']
+        fields = ['id', 'winner', 'number_of_moves', 'date_started']

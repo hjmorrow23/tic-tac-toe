@@ -9,12 +9,15 @@ export const gamesInitialState = {
     creator: ''
 }
 
-const reducer = (state = gamesInitialState, action) => {
+const reducer = (state = gamesInitialState, action = {}) => {
     switch(action.type) {
         case getType(Actions.setGamesList):
+            console.log('FYREEEE', action.payload)
             return Reducers.onSetGamesList(state, action.payload);
         case getType(Actions.setGamesListError):
             return Reducers.onSetGamesListError(state, action.payload);
+        case getType(Actions.resetState):
+            return Reducers.resetState();
         default:
             return state;
     }
