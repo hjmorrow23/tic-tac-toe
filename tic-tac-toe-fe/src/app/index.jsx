@@ -8,6 +8,8 @@ import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 import gameReducer from "~/app/ducks/games/reducers";
+import playersReducer from "~/app/ducks/players/reducers";
+import playerReducer from "~/app/ducks/player/reducers";
 import { apiBase } from './api/ApiBase';
 import authReducer from '~/app/ducks/auth/reducers';
 import sideNavReducer from '~/app/ducks/side_nav/reducers';
@@ -20,6 +22,8 @@ const history = createBrowserHistory();
 const createRootReducer = (history) => combineReducers({
     router: connectRouter(history),
     game: gameReducer,
+    players: playersReducer,
+    player: playerReducer,
     auth: authReducer,
     side_nav: sideNavReducer,
 });

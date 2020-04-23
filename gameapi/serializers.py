@@ -22,6 +22,7 @@ class PlayerSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'wins', 'losses', 'ties']
 
 class GameSerializer(serializers.ModelSerializer):
+    # winner = PlayerSerializer(allow_null=True)
     # creator = serializers.ReadOnlyField(source='creator.username')
     # winner = serializers.SlugRelatedField(
     #     slug_field='name',

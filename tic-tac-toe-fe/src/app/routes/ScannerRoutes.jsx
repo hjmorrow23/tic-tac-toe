@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
-import Test from '../containers/Test';
+import GameBoard from '../containers/GameBoard';
 
 const ScannerRoutes = () => {
     return (
         <Switch>
-            <Route path="/game" component={Test} />
+            <Route path="/game" component={GameBoard} />
         </Switch>
     )
 }
