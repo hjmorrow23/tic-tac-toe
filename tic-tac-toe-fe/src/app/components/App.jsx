@@ -4,7 +4,7 @@ import SideNav from './SideNav';
 
 import TestRoutes from '../routes/ScannerRoutes';
 import { Switch, Redirect, withRouter } from 'react-router';
-import AuthorizedRoute from '@stockx/authorized-route';
+// import AuthorizedRoute from '@stockx/authorized-route';
 import { getIsAuthorized } from '../ducks/auth/selectors';
 import { connect } from 'react-redux';
 import { getShowNav } from '../ducks/side_nav/selectors';
@@ -23,7 +23,7 @@ class App extends React.Component {
       <div className="game-container container">
           <div className="content">
           <Switch>
-            <AuthorizedRoute path="/game" component={TestRoutes} isAuthorized={isAuthorized} />
+            {/* <AuthorizedRoute path="/game" component={TestRoutes} isAuthorized={isAuthorized} /> */}
             <Redirect to="/game" />
           </Switch>
         </div>
