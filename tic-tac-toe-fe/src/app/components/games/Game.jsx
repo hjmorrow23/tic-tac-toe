@@ -232,7 +232,7 @@ const Game = ({currentPlayers, setGameActive, postGame, mapPlayerToId}) => {
                     <div className="game-board__space col-sm" id="space-8" data-space="8" onClick={(e) => handleTurn(e)}></div>
                     <div className="game-board__space col-sm" id="space-9" data-space="9" onClick={(e) => handleTurn(e)}></div>
                 </div> 
-            </div>  
+            </div>   
         </div>
     );
 };

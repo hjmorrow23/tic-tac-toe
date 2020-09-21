@@ -21,7 +21,7 @@ const SideNav = ({ showNav }) => {
                     <div className="nav-item">
                         <NavLink to="/scanner" className="nav-link d-flex align-items-center p-0">
                             <div className="position-relative d-flex align-items-center">
-                                <div className="lg-icon bg-dark nav-link-icon"></div>
+                                <div className="lg-icon bg-dark nav-link-icon"><Icon icon={StockXIcons.DiscountBubble} alt="discount" /></div>
                                 <div className="text-size-lg nav-link-text pr-2">Test Link 1</div>
                             </div>
                         </NavLink>
