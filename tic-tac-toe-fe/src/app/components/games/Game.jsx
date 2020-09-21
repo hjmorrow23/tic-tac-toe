@@ -152,7 +152,7 @@ const Game = ({currentPlayers, setGameActive, postGame, mapPlayerToId}) => {
     }
 
     const changePlayerRecord = () => {
-        if(currentGameRef.current.winner === null) {
+        if(!currentGameRef.current.winner) {
             //Map over tied players and update their tied record
             let tiedPlayers = currentPlayers;
             tiedPlayers.map(player => {
@@ -203,19 +203,21 @@ const Game = ({currentPlayers, setGameActive, postGame, mapPlayerToId}) => {
         console.log(submittedGame)
 
         changePlayerRecord();
-        // postGame(submittedGame);
+        postGame(submittedGame);
     };
 
     return (
         <div>
-            <h1>Tic Tac Toe</h1>
-            <button onClick={startGame}>{currentGameRef.current.status === "complete" ? "Rematch" : "Start Game"}</button>
-            <button onClick={() => setGameActive(false)}>Back to Dashboard</button>
+            <h1 className="main-game-header">Tic Tac Toe</h1>
+            <div className="game-button-row">
+                <button onClick={startGame} className="start-game-button button">{currentGameRef.current.status === "complete" ? "Rematch" : "Start Game"}</button>
+            <button onClick={() => setGameActive(false)} className="back-button button">Back to Dashboard</button>
             {currentGameRef.current.status === "complete" ? (
-                <button onClick={() => saveGame()}>Save Game</button>
+                <button onClick={() => saveGame()} className="button">Save Game</button>
             ) : null}
+            </div>
             
-            <h1>{displayHeaderRef.current}</h1>
+            <h1 className="game-status-header">{displayHeaderRef.current}</h1>
             <div className="game-board">
                 <div className="row">
                     <div className="game-board__space col-sm" id="space-1" data-space="1" onClick={(e) => handleTurn(e)}></div>

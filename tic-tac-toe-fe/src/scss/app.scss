@@ -6,6 +6,128 @@ body {
   background-color: navy;
 }
 
+.button {
+  background: white;
+  color: navy;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color .25s, background .25s;
+}
+
+.button:hover {
+  color: white;
+  background: navy;
+}
+
+.leaderboard-container {
+  width: 100%;
+  position: relative;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .start-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.leaderboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.leaderboard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.leaderboard-panel {
+  width: 30%;
+  // flex-basis: 35%;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 25px;
+  background: white;
+  color: navy;
+}
+
+.leaderboard-panel-title {
+  font-size: 20px;
+}
+
+.leaderboard-panel-list {
+  list-style: none;
+  padding-left: 0;
+}
+.leaderboard-panel-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leaderboard-panel-list-item-name {
+  align-self: flex-start;
+}
+.leaderboard-panel-list-item-name {
+  align-self: flex-end;
+}
+
+.set-name-modal {
+  border: 1px solid white;
+  padding: 30px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  position: relative;
+
+  .close-modal {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  .player-form {
+    display: flex;
+    flex-direction: column;
+
+    .player-input {
+      width: 25%;
+      outline: none;
+      margin-bottom: 20px;
+    }
+
+    .submit-button {
+      margin: 0 auto;
+      width: 20%;
+    }
+  }
+}
+
+.game-button-row {
+  margin-bottom: 30px;
+}
+.start-game-button,
+.back-button {
+  margin-right: 20px;
+}
+
+.main-game-header {
+  margin-bottom: 30px;
+}
+
+.game-status-header {
+  margin-bottom: 30px;
+}
+
 .game-container {
   width: 60%;
   display: block;

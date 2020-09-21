@@ -70,7 +70,7 @@ const GameBoard = () => {
         //Add player if they don't exist in database
         currentPlayersRef.current.map(player => {
             if(newPlayerNames.includes(player.name.toLowerCase())) {
-                // postPlayer(player);
+                postPlayer(player);
             };
         });
     };
