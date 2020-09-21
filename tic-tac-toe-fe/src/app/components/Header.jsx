@@ -37,7 +37,7 @@ const Header = ({ isAuthorized, onLogout, showNav, setShowNav }) => {
             </div>
             <Link to="/" className="navbar-brand d-none d-md-block">
                 <div className="d-flex align-items-center ml-4">
-                    <img src="//internal-cdn.staging.stockx.io/1.0.2/img/logo-stock-x-black.svg" width="76" height="34" className="d-inline-block align-top" alt="" />
+                    {/* <img src="//internal-cdn.staging.stockx.io/1.0.2/img/logo-stock-x-black.svg" width="76" height="34" className="d-inline-block align-top" alt="" /> */}
                     <div className="divider">&nbsp;</div>
                     <div>Catalog-Suite</div>
                 </div>

@@ -36,9 +36,6 @@
     "sass": "^1.17.2"
   },
   "dependencies": {
-    "@stockx/authorized-route": "^1.0.3",
-    "@stockx/icons": "^1.0.6",
-    "@stockx/react-pager": "^1.0.6",
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.3.1",
